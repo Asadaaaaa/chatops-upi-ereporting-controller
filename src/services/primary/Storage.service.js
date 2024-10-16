@@ -32,7 +32,7 @@ class StorageService {
     
     return {
       filePath: this.server.env.SERVER_HOST + (
-        this.server.env.SERVER_HOST.startsWith('https') ? '' : this.server.env.PORT
+        this.server.env.SERVER_HOST.startsWith('https') ? '' : ':' + this.server.env.PORT
       ) + '/' + this.server.env.API_VERSION + '/primary/storage/get?file=' + getTimeHash + '.' + data.mime_type.split('/')[1],
     }
   }
