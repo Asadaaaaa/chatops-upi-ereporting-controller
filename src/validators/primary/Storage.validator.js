@@ -20,7 +20,6 @@ class StorageValidator {
       mime_type: {
         type: 'string',
         minLength: 1,
-        maxLength: 15,
         pattern: '^\\S+$',
         nullable: false
       }
