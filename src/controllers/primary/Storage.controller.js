@@ -41,7 +41,7 @@ class StorageController {
     res.setHeader("Content-Type", getFileSrv.mime);
     res.setHeader(
       "Content-Disposition",
-      "inline; filename=" + req.query.file
+      "inline; filename=" + req.query.file + '; title=' + new Date() + ';'
     );
 
     return res.status(200).send(getFileSrv.file)
